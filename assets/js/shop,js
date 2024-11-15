@@ -1,0 +1,61 @@
+document.getElementById("filterBtn").addEventListener("click", function () {
+    const filterAside = document.getElementById("filterAside");
+    filterAside.classList.toggle("active");
+
+    // Add or remove 'no-scroll' class on the body when the sidebar is opened/closed
+    if (filterAside.classList.contains("active")) {
+        document.body.classList.add("no-scroll");  // Prevent background scroll
+    } else {
+        document.body.classList.remove("no-scroll");  // Allow background scroll
+    }
+});
+
+document.getElementById("closeBtn").addEventListener("click", function () {
+    const filterAside = document.getElementById("filterAside");
+    filterAside.classList.remove("active"); // Close the aside by removing the 'active' class
+    document.body.classList.remove("no-scroll"); // Re-enable background scroll
+});
+
+
+document.getElementById("clearFilter").addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    // Uncheck all brand checkboxes
+    document.querySelectorAll('input[name="brand[]"]').forEach(function (checkbox) {
+        checkbox.checked = false;
+    });
+
+    // Uncheck all review radio buttons
+    document.querySelectorAll('input[name="review"]').forEach(function (radio) {
+        radio.checked = false;
+    });
+
+    // Reset the price range inputs to default values
+    const priceMin = document.getElementById("price_min");
+    const priceMax = document.getElementById("price_max");
+
+    priceMin.value = priceMin.min; // Set to minimum price
+    priceMax.value = priceMax.max; // Set to maximum price
+
+    // Update the output elements showing the price values
+    priceMin.nextElementSibling.value = priceMin.value;
+    priceMax.nextElementSibling.value = priceMax.value;
+
+    // Get the current URL
+    const url = new URL(window.location.href);
+
+    // Remove filters but retain the search query
+    url.searchParams.delete('brand[]'); // Remove brand filter
+    url.searchParams.delete('price_min'); // Remove minimum price filter
+    url.searchParams.delete('price_max'); // Remove maximum price filter
+    url.searchParams.delete('review'); // Remove review filter
+
+    // Retain the search query (DO NOT delete 'search')
+    // Apply the updated URL without reloading the page
+    window.history.replaceState({}, document.title, url);
+
+    // Optionally reload the page to apply the cleared filters
+    window.location.reload(); 
+});
+
+

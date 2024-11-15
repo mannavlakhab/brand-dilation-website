@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*=============== GOOGLE FONTS ===============*/
+@font-face {
+  font-family: 'bd title';
+  /* src: url('../assets/font/bd title.woff2') format('woff2'); */
+  src: url('../font/pp.woff2') format('woff2');
+  
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --hue: 0;
+  --sat: 100%;
+  --first-color: hsl(var(--hue), var(--sat), 70%);
+  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+  --title-color: #00000;
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Montserrat",!important;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --tiny-font-size: .625rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+.nav__menu ul {
+  list-style: none;
+  font-family: "Montserrat", sans-serif!important;
+  font-weight: 600 !important;
+  line-height:1.1 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section__height {
+  height: 100vh;
+}
+
+/*=============== LAYOUT ===============*/
+.container-nav-new {
+  max-width: 968px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--container-color);
+  z-index: var(--z-fixed);
+  transition: .4s;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* unvisited link */
+a:link {
+  color: #3c0e40;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #3c0e40;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF9999;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #FF9999;
+  text-decoration: none;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: 600;
+  width: 212px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 4rem;
+    padding: 0 0rem;
+    display: grid;
+    align-content: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+    transition: .4s;
+  }
+
+  .nav__logo {
+    width: 200px;
+    margin: 25%;
+  }
+  .header{
+    padding: 2%;
+  }
+}
+
+
+.nav__list,
+.nav__link {
+  display: flex;
+}
+
+/* unvisited link */
+a:link {
+  color: #3c0e40;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #3c0e40;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF9999;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #FF9999;
+  text-decoration: none;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.nav__list {
+  justify-content: space-around;
+  padding: 0;
+  margin-top: 4%;
+}
+
+.nav__name {
+  font-size: var(--tiny-font-size); 
+  /* Minimalist design, hidden labels */
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+/*Active link
+.manisbest-intheworld {
+  position: relative;
+  color: var(--first-color);
+  transition: .3s;
+}*/
+
+/* Minimalist design, active link */
+.manisbest-intheworld::before {
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+  
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav__list {
+    justify-content: center;
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding: 7rem 0 2rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+    /* 4.5rem */
+  }
+
+  .nav__img {
+    display: none;
+  }
+
+  .nav__icon {
+    display: none;
+  }
+
+  .nav__name {
+    font-size: var(--normal-font-size);
+    display: block;
+    /* Minimalist design, visible labels */
+  }
+
+  .nav__link:hover {
+    color: var(--first-color);
+  }
+
+  /* First design, remove if you choose the minimalist design */
+  .manisbest-intheworld::before {
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    width: 4px;
+    height: 4px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+  }
+
+  /* Minimalist design */
+  .manisbest-intheworld::before {
+    bottom: -.75rem;
+    background-color: #3c0e40;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .container-nav-new {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

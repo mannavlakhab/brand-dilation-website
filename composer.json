@@ -1,0 +1,13 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "twilio/sdk": "^6.0",
+        "fpdf/fpdf": "^1.86",
+        "setasign/fpdf": "^1.8",
+        "dompdf/dompdf": "^3.0",
+        "guzzlehttp/guzzle": "^7.9",
+        "cboden/ratchet": "^0.4.4",
+        "picqer/php-barcode-generator": "^3.2",
+        "endroid/qr-code": "^6.0"
+    }
+}

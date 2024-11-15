@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'bd title';
+    /* src: url('../assets/font/bd title.woff2') format('woff2'); */
+    src: url('../font/pp.woff2') format('woff2');
+    
+  }
+  @font-face {
+    font-family: 'bd';
+    /* src: url('../assets/font/bd title.woff2') format('woff2'); */
+    src: url('../font/BD.woff2') format('woff2');
+    
+  }
+  
+
+  .title-font{
+    font-family: bd title;
+    font-weight: 800;
+  }
+body {
+    font-family: bd;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4, url('../noise.svg');
+    background-blend-mode: overlay;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+#hero {
+    background-image: url('../img/dell-4Ea0P4IsZ_4-unsplash.jpg'), url('../noise.svg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background: 
+    linear-gradient(20deg, rgb(0, 0, 0), #3c0e40), 
+    url(https://grainy-gradients.vercel.app/noise.svg); 
+    background-blend-mode: multiply;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #ff6666;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+
+
+/* Call-to-Action Section Styling */
+#contact {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #e4e4e4;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #6b1972;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3c0e40;
+}
+
+
+
+
+
+
+
+
+
+
+/* General Section Styling */
+#services {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fdfdfd;
+}
+
+/* Service Container Styling */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Individual Service Item Styling */
+.service-item {
+    background: 
+    linear-gradient(230deg, rgb(192, 192, 192), #e7e8e8), 
+    url(https://grainy-gradients.vercel.app/noise.svg); 
+    background-blend-mode: overlay;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    color: #3c0e40;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Icon Styling for Services */
+.icon {
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px auto;
+}
+
+/* Example of icons, you need to replace the background-image URL with actual icons */
+.sales-icon {
+    background-image: url('icons/sales-icon.png');
+}
+
+.repair-icon {
+    background-image: url('icons/repair-icon.png');
+}
+
+.maintenance-icon {
+    background-image: url('icons/maintenance-icon.png');
+}
+
+.corporate-icon {
+    background-image: url('icons/corporate-icon.png');
+}
+
+
+
+
+
+/* Book a Service Section Styling */
+#book-service {
+    padding: 60px 20px;
+    background: 
+    linear-gradient(230deg, rgb(83, 83, 83), #e7e8e8), 
+    url(https://grainy-gradients.vercel.app/noise.svg); 
+    background-blend-mode: overlay;
+    text-align: center;
+}
+
+#book-service h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.booking-info {
+    text-align: left;
+    max-width: 600px;
+}
+
+.booking-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #3c0e40;
+}
+
+.booking-info p {
+    font-size: 1.1rem;
+    color: #e9dede;
+    line-height: 1.6;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.booking-form label {
+    font-size: 1rem;
+    color: #000000;
+    text-align: left;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 90%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+}
+
+.booking-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.booking-form button {
+    padding: 15px;
+    background-color: #6b1972;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #3c0e40;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .booking-container {
+        padding: 20px;
+    }
+
+    #book-service h2 {
+        font-size: 2rem;
+    }
+
+    .booking-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .booking-info p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+/* Service Details Section Styling */
+#details {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Detail Box Styling */
+.detail-box {
+    background: 
+    linear-gradient(230deg, rgb(192, 192, 192), #e7e8e8), 
+    url(https://grainy-gradients.vercel.app/noise.svg); 
+    background-blend-mode: overlay;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.detail-box h3 {
+    font-size: 2rem;
+    color: #3c0e40;
+    margin-bottom: 15px;
+}
+
+.detail-box p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+
+
+/* Testimonials Section Styling */
+#testimonials {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonial-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 3%;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.testimonial-box {
+    min-width: 300px;
+    max-width: 400px;
+    background: 
+    linear-gradient(230deg, rgb(192, 192, 192), #e7e8e8), 
+    url(https://grainy-gradients.vercel.app/noise.svg); 
+    background-blend-mode: overlay;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: scale(1.05);
+}
+
+.testimonial-box p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+
+/* FAQ Section Styling */
+#faq {
+    padding: 60px 20px;
+    background: 
+    linear-gradient(230deg, rgb(192, 192, 192), #e7e8e8), 
+    url(https://grainy-gradients.vercel.app/noise.svg); 
+    background-blend-mode: overlay;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#faq p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#faq a {
+    color: #6b1972;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#faq a:hover {
+    color: #3c0e40;
+}

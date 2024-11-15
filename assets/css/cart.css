@@ -1,0 +1,282 @@
+@font-face {
+  font-family: 'bd title';
+  /* src: url('../assets/font/bd title.woff2') format('woff2'); */
+  src: url('../font/pp.woff2') format('woff2');
+  
+}
+@font-face {
+  font-family: 'bd';
+  /* src: url('../assets/font/bd title.woff2') format('woff2'); */
+  src: url('../font/BD.woff2') format('woff2');
+  
+}
+
+.cart-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* From Uiverse.io by jjiubs */ 
+.hello-input {
+  border: 2px solid #0000003d;
+  width: 15em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: all 0.5s;
+  margin-right: 2%;
+}
+
+.hello-input:hover,
+.hello-input:focus {
+  border: 2px solid #4a9dec;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+
+
+        /* General page styling */
+        body {
+            font-family: bd, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        /* Container for the cart */
+        .cart-container {
+            max-width: 1200px;
+            transform: scale(0.95);
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #FFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: scroll;
+
+        }
+        
+        /* Heading */
+        .cart-container h2 {
+            text-align: center;
+            font-family: bd title, sans-serif;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        /* Cart table */
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .cart-table th, .cart-table td {
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .cart-table th {
+            background-color: #FF6666;
+            color: #fff;
+        }
+        
+        .cart-table td {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .cart-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .cart-table img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        /* Quantity input */
+        .cart-quantity input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        
+        /* Remove button */
+        .cart-remove-btn {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: rgb(20, 20, 20);
+          border: none;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+          cursor: pointer;
+          transition-duration: .3s;
+          overflow: hidden;
+          position: fixed;
+        }
+        
+        .svgIcon {
+          width: 12px;
+          transition-duration: .3s;
+        }
+        
+        .svgIcon path {
+          fill: white;
+        }
+        
+        .cart-remove-btn:hover {
+          width: 110px;
+          border-radius: 50px;
+          transition-duration: .1s;
+          background-color: rgb(255, 69, 69);
+          align-items: center;
+        }
+        
+        .cart-remove-btn:hover .svgIcon {
+          width: 50px;
+          transition-duration: .3s;
+          transform: translateY(60%);
+        }
+        
+        .cart-remove-btn::before {
+          position: absolute;
+          top: -20px;
+          content: "Remove";
+          color: white;
+          transition-duration: .3s;
+          font-size: 2px;
+        }
+        
+        .cart-remove-btn:hover::before {
+          font-size: 13px;
+          opacity: 1;
+          transform: translateY(30px);
+          transition-duration: .3s;
+        }
+        
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cart-table th, .cart-table td {
+                padding: 10px;
+            }
+        
+            .cart-container {
+                padding: 10px;
+            }
+        
+            .cart-table img {
+                width: 70px;
+            }
+        
+            .cart-checkout-btn {
+                font-size: 16px;
+            }
+        }
+        .cart-checkout-btn {
+          position: relative;
+          transition: all 0.3s ease-in-out;
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          padding-block: 0.5rem;
+          padding-inline: 1.25rem;
+          background-color: #FF6666;
+          border-radius: 9999px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: #ffff;
+          gap: 10px;
+          font-weight: bold;
+          border: 3px solid #ffffff4d;
+          outline: none;
+          overflow: hidden;
+          font-size: 15px;
+        }
+        
+        .icon {
+          width: 24px;
+          height: 24px;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        .cart-checkout-btn:hover {
+          transform: scale(1.05);
+          border-color: #fff9;
+        }
+        
+        .cart-checkout-btn:hover .icon {
+          transform: translate(4px);
+        }
+        
+        .cart-checkout-btn:hover::before {
+          animation: shine 1.5s ease-out infinite;
+        }
+        
+        .cart-checkout-btn::before {
+          content: "";
+          position: absolute;
+          width: 100px;
+          height: 100%;
+          background-image: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%
+          );
+          top: 0;
+          left: -100px;
+          opacity: 0.6;
+        }
+        
+        @keyframes shine {
+          0% {
+            left: -100px;
+          }
+        
+          60% {
+            left: 100%;
+          }
+        
+          to {
+            left: 100%;
+          }
+        }
+        
+        .shopping {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            font-size: 19px;
+            font-weight: bold;
+            gap: 6px;
+            transition: all 0.3s ease-in-out;
+            color: black;
+        }
+        
+        .shopping:hover {
+            color: rgb(49 43 43);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .shopping svg {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .shopping:hover svg {
+            transform: translateX(6px);
+            transition: all 0.3s ease-in-out;
+        }
+        
+           

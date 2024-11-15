@@ -1,0 +1,535 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+  @font-face {
+    font-family: 'BD';
+    src: url('../font/BD.woff2') format('woff2');
+    
+}
+  body {
+    font-family: BD, sans-serif;
+    margin: 0;
+    padding: 0; 
+  }
+
+
+  .ab-o-oa {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: BD, sans-serif;
+
+}
+
+.ab-o-oa-r {
+    display: contents;
+}
+
+.ab-o-oa-qc-V {
+    font-weight: 800;
+
+}
+
+.ab-o-oa-qc-r {
+    font-weight: normal;
+
+}
+  .container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 20%;
+    margin: 2%;
+    border: 1px solid rgb(60 14 64 / 15%);
+    border-radius: 10px;
+    width:-webkit-fill-available;
+  }
+
+  .product-image{
+    padding: 5px;
+    height: -webkit-fill-available;
+    background-color: #ffffff;
+  }
+
+  .product-image img{
+    width: 300px;
+    border-radius: 3px;
+  }
+
+  .product-details {
+    width: -webkit-fill-available;
+    margin-left: 2%;
+    margin-bottom: 2%;
+  }
+
+  .product-title {
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: -webkit-box;             /* Required for webkit-based browsers */
+      -webkit-box-orient: vertical;     /* Specifies the orientation */
+      -webkit-line-clamp: 2;            /* Limits the text to 2 lines */
+      overflow: hidden;                 /* Hides any overflowing content */
+      text-overflow: ellipsis;          /* Adds "..." when the text is truncated */
+      max-width: -webkit-fill-available;                  /* Adjust the width if necessary */ 
+  }
+  .subtitle-desc{
+    font-size: 14px;
+    display: -webkit-box;             /* Required for webkit-based browsers */
+    -webkit-box-orient: vertical;     /* Specifies the orientation */
+    -webkit-line-clamp: 3;            /* Limits the text to 2 lines */
+    overflow: hidden;                 /* Hides any overflowing content */
+    text-overflow: ellipsis;          /* Adds "..." when the text is truncated */
+    max-width: 100%;                  /* Adjust the width if necessary */ 
+  }
+
+  .deal {
+    background-color: red;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .product-price-discount sup{
+    font-size: 12px;}
+  .price {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .discount {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    border-radius: 4px;
+      background: #212529;
+      color: #fff;
+      padding: 7px 45px;
+      display: inline-block;
+      height: -webkit-fill-available;
+      border: solid 2px #212529;
+      transition: all 0.5s ease-in-out 0s;
+      cursor: pointer;
+      margin-left: 2%;
+  }
+
+  .button:hover,
+  .button:focus
+  {
+    background: transparent;
+    color: #212529;
+    text-decoration: none;
+  }
+  .row{
+    display: flex;
+      -ms-flex-wrap: wrap;
+    align-items: center;
+  }
+  .color-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .color-option.selected {
+    border: 2px solid black;
+  }
+
+  .like_button{
+    display: grid;
+  }
+
+
+  .reviews-counter {
+    font-size: 16px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .reviews-counter span {
+  vertical-align: -2px;
+  }
+
+
+
+  .product-price-discount {
+    font-size: 22px;
+      font-weight: 400;
+      clear: both;
+      margin-top: -20px;
+  }
+  .product-price-discount span.line-through {
+    text-decoration: line-through;
+      margin-left: 10px;
+      font-size: 14px;
+      vertical-align: middle;
+      color: #a5a5a5;
+  }
+
+  .ch img{
+    margin-bottom: -20px;
+    width: 150px;
+    border-radius: 0;
+    position: relative;
+
+
+  }
+  .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    left: 32%;
+    /* Position the tooltip */
+  
+  }
+
+  .ch:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .tooltiptext {
+        left: 37%;
+    }
+    .product-image img{
+      width: 220.66px;
+    }
+    .product-title {
+      font-size: 18px;
+      margin-bottom: 5px;
+      -webkit-line-clamp: 3;          /* Adds "..." when the text is truncated */
+        max-width: 200px;                  /* Adjust the width if necessary */ 
+    }
+    .subtitle-desc{
+      display: none;
+    }
+    .subtitle{
+      font-size: small;
+    }
+    .ch{
+      width: 100px;
+    }
+  .product-price-discount {
+    font-size: 24px;
+  }
+    .button {
+        padding: 7px 8px;
+        margin: 2%;
+    }
+    
+    .button:hover,
+    .button:focus
+    {
+      background: transparent;
+      color: #212529;
+      text-decoration: none;
+    }
+    .like_button{
+      margin-left: -0;
+    }
+    
+    .row{
+      display: flex;
+        -ms-flex-wrap: wrap;
+        justify-content: flex-end;
+      align-items: center;
+    }
+  .shop-container{
+    margin-top: 16%;
+  }
+  }
+
+
+  /* Ensure the container is responsive */
+
+/* 
+.sidebar {
+  flex: 1;
+  padding: 10px;
+  height: 100%;
+} */
+
+
+.product-list .btu{
+ display: flex; 
+}
+
+.action_has {
+  background: #fff;
+    border: 1px solid #ff6666;
+    border-radius: 5px;
+}
+h1,h3{
+    padding-top: 11%;
+    text-align: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: bd;
+}
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  backdrop-filter: blur(19px);
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 101;
+        overflow-x: hidden;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+}
+
+
+.btu button{
+  color: black;
+  font-family: bd;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 2%;
+  font-size: medium;
+  box-shadow: 1px 1px 5px #ccc;
+  word-wrap: keep-all;
+}
+@media (min-width: 768px) {
+  .shop-container {
+    flex-direction: column;
+  }
+  h1{
+    padding-top: 5%;
+}
+}
+
+@media (max-width: 767px) {
+  /* .sidebar {
+    width: 100%;
+  } */
+  .product-list {
+    width: 100%;
+  }
+}
+
+/* Initially hide the filter aside */
+#filterAside {
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: -300px; /* Start hidden off-screen */
+  height: 500px;
+  width: 250px;
+  padding: 15px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  overflow: scroll;
+}
+
+#filterAside.active {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  left: 0; /* Slide in when active */
+  z-index: 102;
+}
+
+/* Button Styles */
+#filterBtn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: BD ;
+
+}
+
+#filterBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Add styles for the form inside the aside */
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group h4 {
+  margin-bottom: 10px;
+}
+
+.filter-group label,
+.filter-group input {
+  margin-bottom: 5px;
+}
+
+.sorting-buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+#closeBtn, #filterAside button{
+  float: right;
+  padding: 5px;
+  box-shadow: 1px 1px 5px #ccc;
+  margin-right: 2%;
+  margin-bottom: 2%;
+    margin-left: 2%;
+    border: 1px solid #3c0e4059;
+    border-radius: 7px;
+}
+
+#filterAside::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#filterAside {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* This class will prevent scrolling on the body */
+body.no-scroll {
+  overflow: hidden;
+}
+
+
+
+
+/* From Uiverse.io by namecho */ 
+.switch {
+  --button-width: 2.5em;
+  --button-height: 1.4em;
+  --toggle-diameter: 1em;
+  --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+  --toggle-shadow-offset: 10px;
+  --toggle-wider: 3em;
+  --color-grey: #cccccc;
+  --color-green: #4296f4;
+ }
+ 
+ .slider {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--color-grey);
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+ }
+ 
+ .slider::after {
+  content: "";
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle-offset);
+  transform: translateX(var(--button-toggle-offset));
+  box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+ }
+ 
+ .switch input[type="checkbox"]:checked + .slider {
+  background-color: var(--color-green);
+ }
+ 
+ .switch input[type="checkbox"]:checked + .slider::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+ }
+ 
+ .switch input[type="checkbox"] {
+  display: none;
+ }
+ 
+ .switch input[type="checkbox"]:active + .slider::after {
+  width: var(--toggle-wider);
+ }
+ 
+ .switch input[type="checkbox"]:checked:active + .slider::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+ }
+ 
+
+
+
+
+
+ 
+/* From Uiverse.io by xetrov47 */ 
+.search {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid #767676;
+  color: #767676;
+  padding: 5px 10px;
+  border-radius: 4px;
+  height: 30px;
+  width: 15rem;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #767676;
+  font-size: 14px;
+}
+
+.search__button {
+  font-family: bd;
+  font-size: inherit;
+  border: 1px solid #767676;
+  color: #767676;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  height: 40px;
+  margin-left: 2%;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search input:focus {
+  outline: none;
+}

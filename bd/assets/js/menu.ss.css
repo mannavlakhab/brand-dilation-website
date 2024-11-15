@@ -1,0 +1,7 @@
+     
+    .sidebar {
+            transition: transform 0.3s ease;
+        }
+    .sidebar-hidden {
+            transform: translateX(-100%);
+        }

@@ -1,0 +1,195 @@
+
+
+.review {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 3%;
+    background-color: #f9f9f9;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star.filled {
+    background-color: #3c0e40;
+}
+
+.review-text {
+    margin: 10px 0;
+}
+
+
+.review-date {
+    color: #555;
+}
+
+
+.review-form img {
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reviews-container {
+        padding: 10px;
+    }
+}
+
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    padding: auto;
+    width: 100%; /* Full width */
+    height: auto !important; /* Full height */
+    overflow: scroll !important; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        margin-top: 35%;
+    }
+}
+.modal-content {
+    border-radius: 10px !important;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: block;
+    width: 80% !important;
+    height: auto;
+    max-width: 700px;
+    max-height: auto !important;
+    overflow: scroll; /* Enable scroll if needed */
+}
+
+.modal .close {
+    position: absolute;
+    top: 15px;
+    margin-top: 13%;
+    right: 35px;
+    color: #fff;
+    z-index: 2000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: #ff1414;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Change the background color and text color when text is selected */
+::selection {
+    background-color: #3c0e40; /* Background color */
+    color: #ffffff; /* Text color */
+}
+
+/* For webkit-based browsers (like Chrome, Safari) */
+::-webkit-selection {
+    background-color: #3c0e40;
+    color: #ffffff;
+}
+
+/* For Mozilla Firefox */
+::-moz-selection {
+    background-color: #3c0e40;
+    color: #ffffff;
+}
+select:hover {
+    background-color: #3e0c40; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+/* If you want to style the options when they are hovered */
+select option:hover {
+    background-color: #3e0c40; /* Background color of option on hover */
+    color: #ffffff; /* Text color of option on hover */
+}
+
+.like_button{
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    /* margin: 2%; */
+    margin-top: 3%;
+    margin-bottom: -3%;
+  }
+
+   /* From Uiverse.io by ilkhoeri */ 
+   .action_has {
+    --color: 0, 100%, 70%;
+    --color-has: 295, 64%, 15%;
+    --sz: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(var(--sz) * 2.5);
+    width: calc(var(--sz) * 2.5);
+    padding: 0.4rem 0.5rem;
+    border-radius: 3.375rem;
+    border: 0.0625rem solid hsl(var(--color));
+  }
+  
+  .has_liked svg,
+  .has_saved svg {
+    overflow: visible;
+    height: calc(var(--sz) * 1.75);
+    width: calc(var(--sz) * 1.75);
+    --ease: cubic-bezier(0.5, 0, 0.25, 1);
+    --zoom-from: 1.75;
+    --zoom-via: 0.75;
+    --zoom-to: 1;
+    --duration: 1s;
+  }
+  
+  .has_liked:hover {
+    transition: border-color var(--duration) var(--ease);
+    border-color: hsl(var(--color-has));
+  }
+  
+  .has_liked:hover svg,
+  .has_saved:hover svg {
+    fill: hsl(var(--color-has) / 0.5);
+    color: hsl(var(--color-has));
+  }
